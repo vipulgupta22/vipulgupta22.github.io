@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vipul</title>
+    <title>Vipul</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
     <style>
         *{
@@ -11,25 +11,115 @@
             padding: 0;
         }
         body{
-            background-image: url(https://media.giphy.com/media/xT9IgN8YKRhByRBzMI/giphy.gif);
-            background-size: cover;
-            background-position: center;
+            background-color: black;
             width: 100%;
-            height: 100vh;
+            height:auto;
         }
+    #name{
+        border-radius: 50%;
+        background-color:red;
+        width:40px;
+        height:40px;
+        text-align: center;
+        top: 15px;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    #box2{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    #image{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    #profile{
+        width: 50%;
+        height: 100%;
+        color: white;
+        padding: 20px;
+        padding-top: 300px;
+    }
+    #image img{
+        width: 300px;
+        height: 280px;
+        border-radius: 50%;
+    }
+    #profile h2{
+        color: red;
+        padding: 10px;
+    }
+    #profile h1{
+        font-size: 50px;
+        padding: 10px;
+    }
+    #profile h3{
+        width: 400px;
+        padding: 10px;
+        color: red;
+    }
+    #option{
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    #option a{
+        border: 5px solid orange;
+        background-color: orange;
+        padding: 10px;
+        text-align: center;
+        border-radius: 20px;
+        color: black;
+        text-decoration: none;
+        padding-left: 10px;
+        margin-right: 10px;
+    }
+    #option a:hover{
+        background-color: white;
+    }
+    #footer{
+        display: flex;
+        color: white;
+        width: 100%;
+        height: auto;
+        bottom:15px;
+        position: fixed;
+    }
+    #logo{
+        width:30%;
+        height: auto;
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+    }
+    #copyright{
+        width: 70%;
+    }
+    #copyright h4{
+        float: right;
+        padding-top: 15px;
+        padding-right: 50px;
+    }
     #navbar {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      padding-top: 20px;
+      padding-left: 50px;
     }
-
-    ul#navbar li {
-      float:right;
+    #navbar li {
+        display: inline;
+        padding-top: ;
+      padding-top: 30px;
     }
-
-    ul#navbar li a {
-      display: block;
+    #navbar li a{
       color:white;
       font-weight: bold;
       padding: 8px 16px;
@@ -38,56 +128,45 @@
       padding-top: 10px;
       font-family: 'Courier New', Courier, monospace;
     }
-ul#navbar li a:hover {
+    #navbar li a:hover {
+        color: greenyellow;
       border-bottom: 5px solid orangered;
     }
-    h1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color:snow;
-        padding: 10px;
-    }
-    #particles {
-  height:auto;
-  overflow: hidden;
-}
-
-#intro {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 98%;
-  padding: 0 10px;
-  text-align: center;
-}
-#intro a i{
-    padding: 5px;
-    border-top: 3px solid white;
-}
-#intro a i:hover{
-    color:greenyellow;
-}
     </style>
 </head>
 <body>
     <div>
         <ul id="navbar">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
             <li><a href="#">Contact Me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Certificates</a></li>
-            <li><a href="#">About Me</a></li>
-          </ul>
+        </ul>
     </div>
-    <div id="particles">
-        <div id="intro">
-    <h1>Vipul</h1>
-    <a href="https://www.linkedin.com/in/vipul-gup-2204/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-    <a href="https://www.facebook.com/profile.php?id=100004879125005" style="color: white;"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
-    <a href="https://github.com/vipulgupta22" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-    <a href="https://www.instagram.com/its_vipul.gupta/" style="color: white;"><i class="fab fa-instagram" style="font-size: 2em;"></i></a>
+    <div id="box2">
+        <div id="image">
+            <img src="images/IMG-20191129-WA0015.jpg" alt="">
+        </div>
+        <div id="profile">
+            <h2>Hi There ! My name is</h2>
+            <h1>VIPUL</h1>
+            <h3>I am a WebDeveloper and a Design Thinker. I am learning skills and technology. I am a Student.</h3>
+            <div id="option">
+                <a href="">Resume</a>
+                <a href="">Say Hi!</a>
+            </div>
         </div>
     </div>
+    <div id="footer">
+       <div id="logo">
+        <a href="https://www.linkedin.com/in/vipul-gup-2204/" style="color:blue;"><i class="fab fa-linkedin fa-3x"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100004879125005" style="color:blue;"><i class="fab fa-facebook fa-3x"></i></a>
+        <a href="https://github.com/vipulgupta22" style="color:blue;"><i class="fab fa-github fa-3x"></i></a>
+        <a href="https://www.instagram.com/its_vipul.gupta/" style="color:blue;"><i class="fab fa-instagram fa-3x"></i></a>
+       </div>
+       <div id="copyright">
+         <h4>Vipul <i class="fas fa-copyright"></i> 2020</h4>
+       </div>
+    </div>
+    <h4 id="name">VG</h4>
 </body>
 </html>
