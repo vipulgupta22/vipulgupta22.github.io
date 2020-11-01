@@ -1,198 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Ubuntu:ital,wght@0,500;0,700;1,300&display=swap');
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
-body{
-    background-color: black;
-    width: 100%;
-    height:auto;
-}
-#name{
-border-radius: 50%;
-background-color:red;
-width:40px;
-height:40px;
-text-align: center;
-top: 12px;
-left: 10px;
-position: fixed;
-align-items: center;
-justify-content: center;
-display: flex;
-}
-#box2{
-width: 100%;
-height:500px;
-display: flex;
-justify-content:space-evenly;
-align-items: center;
-}
-#image{
-width: 50%;
-height: 100%;
-display: flex;
-justify-content:center;
-align-items: center;
-}
-#profile{
-width: 50%;
-height: 100%;
-color: white;
-padding: 20px;
-padding-top: 300px;
-}
-#image img{
-width: 300px;
-height: 280px;
-border-radius: 50%;
-}
-#profile h2{
-color: red;
-padding: 10px;
-}
-#profile h1{
-font-size: 50px;
-padding: 10px;
-}
-#profile h3{
-width: 400px;
-padding: 10px;
-color: red;
-}
-#option{
-padding-top: 20px;
-padding-left: 10px;
-}
-#option a{
-border: 5px solid orange;
-background-color: orange;
-padding: 10px;
-text-align: center;
-border-radius: 20px;
-color: black;
-text-decoration: none;
-padding-left: 10px;
-margin-right: 10px;
-}
-#option a:hover{
-background-color: white;
-}
-#footer{
-border-top: 3px solid white;
-display: flex;
-color: white;
-width: 100%;
-height: auto;
-bottom:15px;
-position: fixed;
-}
-#logo{
-width:30%;
-padding-top: 10px;
-height: auto;
-justify-content: space-evenly;
-display: flex;
-align-items: center;
-}
-#copyright{
-width: 70%;
-}
-#copyright h4{
-float: right;
-padding-top: 25px;
-padding-right: 50px;
-}
-#navbar {
-list-style-type: none;
-margin: 0;
-padding: 0;
-padding-top: 20px;
-padding-left: 50px;
-}
-#navbar li {
-display: inline;
-padding-top: ;
-padding-top: 30px;
-}
-#navbar li a{
-color:white;
-font-weight: bold;
-padding: 8px 16px;
-text-decoration: none;
-font-size: 20px;
-padding-top: 10px;
-font-family: 'Courier New', Courier, monospace;
-}
-#navbar li a:hover {
-color: greenyellow;
-border-bottom: 5px solid orangered;
-}
-@media(max-width: 800px) and (max-height:790px){
-#footer{
-    border: none;
-    margin-top: 20px;
-    width: 100%;
-    position: relative;
-}
-#navbar{
-    position:fixed;
-}
-#navbar li a{
-    color: yellow;
-}
-#navbar li a:hover{
-    color:red;
-}
-#logo,#copyright{
-    border-top: 3px solid white;
-}
-}
-@media(max-width: 800px){
-#navbar{
-    width: 100%;
-}
-#box2{
-    display: block;    
-}
-#profile{
-    padding-top: 0;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    
-}
-#profile h3{
-    width: 100%;
-}
-#image{
-    width: 100%;
-    padding-left: 20px;
-}
-#image img{
+.max-width{
+    width: 1300px;
+    padding: 0 80px;
     margin: auto;
 }
-#footer{
-    display: block;
-}
-#logo{
+/* Navbar styling */
+.navbar{
+    /*background: crimson;*/
+    padding: 30px 0;
+    position: fixed;
     width: 100%;
-    border-bottom: 3px solid white;
-    padding: 20px;
+    font-family: 'Ubuntu',sans-serif;
+    transition: all 0.3s ease;
 }
-#copyright{
-    padding: 20px;
-    width: 100%;
+.navbar.sticky{
+    background: crimson;
+    padding: 15px 0;
 }
-#copyright h4{
-    float: none;
-    text-align: center;
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-#box2{
-    height: auto;
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
 }
-#image {
-    padding-top: 70px;
-    height: auto;
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
 }
 
+/* Home styling */
+.home{
+    display: flex;
+    background:url(images/photo-1479231233972-e184fe70398e.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
 }
