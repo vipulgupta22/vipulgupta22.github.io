@@ -61,9 +61,7 @@
 /* Home styling */
 .home{
     display: flex;
-    background:url(images/photo-1479231233972-e184fe70398e.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color:black;
     height: 100vh;
     color: #fff;
     min-height: 500px;
