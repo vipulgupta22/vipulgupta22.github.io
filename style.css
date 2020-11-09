@@ -5,10 +5,36 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 .max-width{
     width: 100%;
     padding: 0 80px;
     margin: auto;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 30px;
+    z-index: 9999;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    bottom: 30px;
+    pointer-events: auto;
 }
 /* Navbar styling */
 .navbar{
@@ -135,13 +161,13 @@ section .title::after{
     transform: translateX(-50%);
     background: #fff;
 }
-.about .about-content,.services .serv-content,.skills .skills-content{
+.about .about-content,.services .serv-content,.skills .skills-content,.contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-.about,.services,.skills,.teams{
+.about,.services,.skills,.teams,.contact,footer{
     font-family: 'Poppins',sans-serif;
 }
 /* About Me styling */
@@ -363,4 +389,107 @@ section .title::after{
 }
 .owl-dot.active,.owl-dot:hover{
     background: crimson!important;
+}
+/* Contact section styling */
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .row .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .row .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .field,.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input,.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins',sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    width: 170px;
+    height: 47px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.contact .right form .button button:hover{
+    background:none;
+    color: crimson;
+}
+/* Footer styling */
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
 }
